@@ -1,3 +1,3 @@
-#BREWERY Service
+# BREWERY Service
 
 Spring Boot Microservice example
