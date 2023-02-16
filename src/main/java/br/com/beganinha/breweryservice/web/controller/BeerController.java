@@ -23,12 +23,12 @@ public class BeerController {
         return new ResponseEntity(HttpStatus.CREATED);
     }
 
-    @PutMapping("/{beedId}")
+    @PutMapping("/{beerId}")
     public ResponseEntity updateBeerById(@PathVariable UUID beerId, @RequestBody BeerDto beerDto) {
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
 
-    @DeleteMapping("/{beedId}")
+    @DeleteMapping("/{beerId}")
     public ResponseEntity deleteBeerById(@PathVariable UUID beerId) {
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
