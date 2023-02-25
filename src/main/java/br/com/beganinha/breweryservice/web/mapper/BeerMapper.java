@@ -4,7 +4,7 @@ import br.com.beganinha.breweryservice.domain.Beer;
 import br.com.beganinha.breweryservice.web.model.BeerDto;
 import org.mapstruct.Mapper;
 
-@Mapper(uses = {DateMapper.class})
+@Mapper(uses = {DateMapper.class}, componentModel = "spring")
 public interface BeerMapper {
     Beer toBeer(BeerDto beerDto);
 

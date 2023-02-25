@@ -6,17 +6,22 @@ import br.com.beganinha.breweryservice.web.controller.NotFoundException;
 import br.com.beganinha.breweryservice.web.mapper.BeerMapper;
 import br.com.beganinha.breweryservice.web.model.BeerDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
-@RequiredArgsConstructor
 @Service
 public class BeerServiceImpl implements BeerService {
 
     private final BeerRepository repository;
 
     private final BeerMapper beerMapper;
+
+    public BeerServiceImpl(BeerRepository repository, BeerMapper beerMapper) {
+        this.repository = repository;
+        this.beerMapper = beerMapper;
+    }
 
     @Override
     public BeerDto getBeerById(UUID beerId) {
